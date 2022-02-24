@@ -1,0 +1,21 @@
+// Trecho referente ao footer da página
+.footer {
+    text-align: center;
+    padding: 20px 0;
+    font-family: Arial, Helvetica, sans-serif;
+    
+    //Manter o footer no centro e em baixo da tela
+    position: relative;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+
+    &__logo {
+        max-width: 100px;
+    }
+    &__txt {
+        margin: auto; 
+        @include fontSize(14px);
+    }
+}
+

@@ -1,0 +1,38 @@
+.contact {
+    @include flx(justify-content, center);
+    align-items: center;
+    flex-wrap: wrap;
+    @extend %double-margin-top;
+    margin-left: auto;
+    margin-right: auto;
+
+    &__figure {
+        width: 50%;
+    }
+
+    &__img {
+        width: 100%;
+    }
+
+    &__info {
+        width: 40%;
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+//     <div class="contact__info">
+//     <p class="contact__p-1">Entre em contato!</p>
+//     <p class="contact__p-2">Será um prazer tirar suas dúvidas e atender seu pet</p>
+//     <p class="contact__p-3">Telefone: (xx) xxxx-xxxx </p>
+//     <p class="contact__p-4">Horário de funcionamento: das 8h às 18h</p>
+//     </div>
+
+    $x: 1;
+    @while $x < 5 {
+        &__p-#{$x} {    //vai referenciando o nome das classes acima e definindo valores para o tamanho da fonte
+            @include fontSize(40px/$x);
+            padding-top: 5px*$x;
+        }
+        $x: $x + 1; //adiciona um ao valor de controle do laço
+    }
+}
